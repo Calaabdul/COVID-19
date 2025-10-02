@@ -85,10 +85,3 @@ if submitted:
     )
 
 st.markdown("---")
-st.markdown(
-    """
-    <small>
-    <i>Powered by Decision Tree Regression. Data source: <a href='https://www.kaggle.com/datasets/sandhyakrishnan02/latest-covid-19-dataset-worldwide' target='_blank'>Kaggle COVID-19 Dataset</a></i>
-    </small>
-    """, unsafe_allow_html=True
-)
