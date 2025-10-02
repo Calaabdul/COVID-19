@@ -1,4 +1,4 @@
-# 🦠 COVID-19 Data Analysis Dashboard
+# 🦠 COVID-19
 
 ---
 
