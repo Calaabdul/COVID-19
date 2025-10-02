@@ -39,37 +39,48 @@ feature_names = [
 with st.form("input_form"):
     col1, col2 = st.columns(2)
     with col1:
-        population = st.number_input("Population", min_value=0.0, value=100.0)
+        continent = st.selectbox("Continent", ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"])
         total_cases_per_million = st.number_input("Total Cases per Million", min_value=0.0, value=1000.0)
+        stringency_index = st.number_input("Stringency Index", min_value=0.0, max_value=100.0, value=50.0)
+        population_density = st.number_input("Population Density", min_value=0.0, value=100.0)
         median_age = st.number_input("Median Age", min_value=0.0, value=30.0)
         gdp_per_capita = st.number_input("GDP per Capita", min_value=0.0, value=10000.0)
         extreme_poverty = st.number_input("Extreme Poverty (%)", min_value=0.0, max_value=100.0, value=10.0)
+        population = st.number_input("Population", min_value=0.0, value=100.0)
+        
+    with col2:
         cardiovasc_death_rate = st.number_input("Cardiovascular Death Rate", min_value=0.0, value=200.0)
         diabetes_prevalence = st.number_input("Diabetes Prevalence (%)", min_value=0.0, value=5.0)
-        hospital_beds_per_thousand = st.number_input("Hospital Beds per Thousand", min_value=0.0, value=2.0)
-    with col2:
-        life_expectancy = st.number_input("Life Expectancy", min_value=0.0, value=70.0)
-        human_development_index = st.number_input("Human Development Index", min_value=0.0, max_value=1.0, value=0.7)
-        stringency_index = st.number_input("Stringency Index", min_value=0.0, max_value=100.0, value=50.0)
         female_smokers = st.number_input("Female Smokers", min_value=0.0, max_value=100.0, value=10.0)
         male_smokers = st.number_input("Male Smokers", min_value=0.0, max_value=100.0, value=30.0)
-        continent = st.selectbox("Continent", ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"])
+        hospital_beds_per_thousand = st.number_input("Hospital Beds per Thousand", min_value=0.0, value=2.0)
+        life_expectancy = st.number_input("Life Expectancy", min_value=0.0, value=70.0)
+        human_development_index = st.number_input("Human Development Index", min_value=0.0, max_value=1.0, value=0.7)
+        
+        
+        
+        
     submitted = st.form_submit_button("Predict")
 
 input_data = pd.DataFrame([{
-    "population": population,
+    "continent": continent,
+    "total_cases_per_million": total_cases_per_million,
+    "stringency_index": stringency_index,
+    "population_density": population_density,
     "median_age": median_age,
     "gdp_per_capita": gdp_per_capita,
-    "cardiovasc_death_rate": cardiovasc_death_rate,
     "extreme_poverty": extreme_poverty,
+    "cardiovasc_death_rate": cardiovasc_death_rate,
     "diabetes_prevalence": diabetes_prevalence,
+    "female_smokers": female_smokers,
+    "male_smokers": male_smokers,
     "hospital_beds_per_thousand": hospital_beds_per_thousand,
     "life_expectancy": life_expectancy,
     "human_development_index": human_development_index,
-    "stringency_index": stringency_index,
-    "female_smokers": female_smokers,
-    "male_smokers": male_smokers,
-    "continent": continent
+   
+    
+    
+   
 }])
 
 if submitted:
