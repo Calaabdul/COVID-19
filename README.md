@@ -22,9 +22,8 @@ This project builds an **interactive data visualization dashboard** that analyze
 ## 📂 Table of Contents  
 1. [Dataset](#-dataset)  
 2. [Project Workflow](#-project-workflow)  
-3. [Installation & Usage](#-installation--usage)  
-4. [How to Use the App](#-how-to-use-the-app)   
-5. [License](#-license)  
+3. [Installation & Usage](#-installation--usage)   
+4. [License](#-license)  
 
 ---
 
