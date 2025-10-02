@@ -27,13 +27,11 @@ st.image("https://images.unsplash.com/photo-1584036561566-baf8f5f1b144", use_con
 
 st.markdown("### Enter Country-Level Features")
 
-# List your actual features from your notebook (replace below with your real feature names)
-feature_names = [
-    "population_density", "median_age", "gdp_per_capita", "cardiovasc_death_rate",
-    "diabetes_prevalence", "hospital_beds_per_thousand", "life_expectancy",
-    "human_development_index", "stringency_index", "handwashing_facilities",
-    "female_smokers", "male_smokers", "continent"
-]
+feature_names = ['continent', 'total_cases_per_million', 'stringency_index',
+       'population_density', 'median_age', 'gdp_per_capita', 'extreme_poverty',
+       'cardiovasc_death_rate', 'diabetes_prevalence', 'female_smokers',
+       'male_smokers', 'hospital_beds_per_thousand', 'life_expectancy',
+       'human_development_index', 'population']
 
 # Input form
 with st.form("input_form"):
@@ -77,6 +75,7 @@ input_data = pd.DataFrame([{
     "hospital_beds_per_thousand": hospital_beds_per_thousand,
     "life_expectancy": life_expectancy,
     "human_development_index": human_development_index,
+    "population": population
    
     
     
