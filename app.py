@@ -37,19 +37,22 @@ feature_names = [
 
 # Input form
 with st.form("input_form"):
-    pop_density = st.number_input("Population Density", min_value=0.0, value=100.0)
-    median_age = st.number_input("Median Age", min_value=0.0, value=30.0)
-    gdp = st.number_input("GDP per Capita", min_value=0.0, value=10000.0)
-    cardio = st.number_input("Cardiovascular Death Rate", min_value=0.0, value=200.0)
-    diabetes = st.number_input("Diabetes Prevalence (%)", min_value=0.0, value=5.0)
-    beds = st.number_input("Hospital Beds per Thousand", min_value=0.0, value=2.0)
-    life_exp = st.number_input("Life Expectancy", min_value=0.0, value=70.0)
-    hdi = st.number_input("Human Development Index", min_value=0.0, max_value=1.0, value=0.7)
-    stringency = st.number_input("Stringency Index", min_value=0.0, max_value=100.0, value=50.0)
-    handwash = st.number_input("Handwashing Facilities (%)", min_value=0.0, max_value=100.0, value=80.0)
-    female_smoke = st.number_input("Female Smokers (%)", min_value=0.0, max_value=100.0, value=10.0)
-    male_smoke = st.number_input("Male Smokers (%)", min_value=0.0, max_value=100.0, value=30.0)
-    continent = st.selectbox("Continent", ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"])
+    col1, col2 = st.columns(2)
+    with col1:
+        pop_density = st.number_input("Population Density", min_value=0.0, value=100.0)
+        median_age = st.number_input("Median Age", min_value=0.0, value=30.0)
+        gdp = st.number_input("GDP per Capita", min_value=0.0, value=10000.0)
+        cardio = st.number_input("Cardiovascular Death Rate", min_value=0.0, value=200.0)
+        diabetes = st.number_input("Diabetes Prevalence (%)", min_value=0.0, value=5.0)
+        beds = st.number_input("Hospital Beds per Thousand", min_value=0.0, value=2.0)
+    with col2:
+        life_exp = st.number_input("Life Expectancy", min_value=0.0, value=70.0)
+        hdi = st.number_input("Human Development Index", min_value=0.0, max_value=1.0, value=0.7)
+        stringency = st.number_input("Stringency Index", min_value=0.0, max_value=100.0, value=50.0)
+        handwash = st.number_input("Handwashing Facilities (%)", min_value=0.0, max_value=100.0, value=80.0)
+        female_smoke = st.number_input("Female Smokers (%)", min_value=0.0, max_value=100.0, value=10.0)
+        male_smoke = st.number_input("Male Smokers (%)", min_value=0.0, max_value=100.0, value=30.0)
+        continent = st.selectbox("Continent", ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"])
     submitted = st.form_submit_button("Predict")
 
 input_data = pd.DataFrame([{
