@@ -12,7 +12,7 @@ This project builds an **interactive data visualization dashboard** that analyze
 ## 🚀 Live Demo  
 
 - [🌍 Render App](https://your-covid19-dashboard.onrender.com)  
-- [⚡ Streamlit Cloud App](https://your-covid19-dashboard.streamlit.app/)  
+- [⚡ Streamlit Cloud App](https://covid-19-cyreggrowjt5y4fecgtfvl.streamlit.app/))  
 
 ### Demo Screenshots  
 [![Dashboard Preview](images/dashboard_preview.png)](YOUR_STREAMLIT_LINK)  
