@@ -87,12 +87,4 @@ if submitted:
     prediction = model.predict(input_data)
     st.success(f"Predicted COVID-19 Mortality Rate: {prediction[0]:.2f}%")
 
-    st.markdown(
-        """
-        <div style='background-color: #f8f9fa; padding: 15px; border-radius: 10px;'>
-        <b>Note:</b> This prediction is based on the input features and the trained Decision Tree model. For more accurate results, ensure all inputs reflect real country data.
-        </div>
-        """, unsafe_allow_html=True
-    )
-
 st.markdown("---")
