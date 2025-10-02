@@ -23,7 +23,7 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-st.image("https://images.unsplash.com/photo-1584036561566-baf8f5f1b144", use_column_width=True)
+st.image("https://images.unsplash.com/photo-1584036561566-baf8f5f1b144", use_container_width =True)
 
 st.markdown("### Enter Country-Level Features")
 
