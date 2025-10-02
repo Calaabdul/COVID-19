@@ -5,7 +5,7 @@
 ## 📌 Project Overview  
 COVID-19 has profoundly impacted global health and economies, making data-driven insights crucial for understanding pandemic trends and patterns. Traditional analysis methods often lack interactivity and real-time capabilities.
 
-This project builds an **interactive data visualization dashboard** that analyzes global COVID-19 trends, vaccination progress, and demographic correlations using comprehensive datasets. The solution is deployed on **Streamlit Cloud** and **Render**, making it accessible to researchers, policymakers, and the general public.
+This project builds an **interactive data visualization dashboard** that analyzes global COVID-19 trends, and demographic correlations using comprehensive datasets. The solution is deployed on **Streamlit Cloud** and **Render**, making it accessible to researchers, policymakers, and the general public.
 
 ---
 
